@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+	  <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- Nunito Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+
+<body class="">
+<nav class="pcoded-navbar menu-light" id="workFile">
+		<div class="navbar-wrapper">
+			<div class="navbar-content scroll-div">
+				<div class="">				
+					<div class="main-menu-header">
+						<img class="img-radius" src="images/helping11.png" alt="User-Profile-Image">
+						 <div class="user-details">
+						   <span class="h5" id="userPfFullName">User</span>
+						 	<span class="h5" id="userPfSurname">Name</span></br>&nbsp;
+							<span class="h5">Plan-</span>
+							<span class="h5" id="userPfPlans"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;							
+								                      
+					   </div>
+					  
+					</div>
+				</div>
+          				
+				<ul class="nav pcoded-inner-navbar ">
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Navigation</label>
+					</li>
+					<li class="nav-item">
+					    <a href="home.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+					    <label>My Service</label>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">My Page</span></a>
+					    <ul class="pcoded-submenu">
+						    <li><a href="my-gh-send.html">My Sending Donation</a></li>
+							<li><a href="my-ph-receive.html">My Receiving Donation</a></li>
+							
+					        
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+					    <label>My Service List</label>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Display List</span></a>
+					    <ul class="pcoded-submenu">					        
+					        <li><a href="my-gh-details.html">My GH</a></li>
+					        <li><a href="my-ph-details.html">My PH</a></li>
+							
+					        
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Settings</label>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">My Profile</span></a>
+					    
+						<ul class="pcoded-submenu">
+						    <li><a href="profile.html">Update Profile</a></li>
+					        <li><a href="bank-details.html">Bank Details</a></li>
+					       <li><a type="button" onclick="signOut()">Logout</a></li>
+					        
+					    </ul>
+					</li>
+				</ul>					
+			</div>
+		</div>
+	</nav>
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">	
+				<div class="m-header">
+					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+					<a href="#!" class="b-brand">
+						<!-- ========   change your logo hear   ============ -->
+					<img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+					</a>
+					<a href="#!" class="mob-toggler">
+						<i class="feather icon-more-vertical"></i>
+					</a>
+				</div>
+			</header>
+	<!-- [ Main Content ] start -->
+	
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+		
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Profile Details</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">My Profile</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+    <div class="row mx-1">
+        <div class="col-sm-12">	
+	   <div class="card">
+          <div class="card-header">
+              <h5>Update Profile</h5>
+           </div>&nbsp;&nbsp;
+		   
+             <div class="col-sm-12">
+                       <div id="profileSection">					    
+						    <div class="input-group mb-3">
+						    <label for="inputEmail" class="col-sm-4 col-form-label">User Email</label>
+							<label class="form-control" type="text" align="start" id="userPfEmail"></label></div>
+							
+							<div class="input-group mb-3">
+						    <label for="inputEmail3" class="col-sm-4 col-form-label">User Id</label>
+							<label class="form-control" type="text" align="start" id="userPfId"></label></div>
+							
+							<div class="input-group mb-3">
+						    <label for="inputEmail4" class="col-sm-4 col-form-label">Sponcer Id</label>
+							<label class="form-control" type="text" align="start" id="sponcerPfId"></label></div>  
+
+							<div class="input-group mb-3">
+						    <label for="inputEmail6" class="col-sm-4 col-form-label">User Pin</label>							
+							<label class="form-control" type="text" align="start" style="filter:blur(10px)" id ="userPfPin"></label></div>					
+							  
+							<div class="input-group mb-3">
+						    <label for="inputEmail7" class="col-sm-4 col-form-label">User Mobile</label>
+							<label class="form-control" type="text" align="start" id ="userPfMobile"></label>
+							</div>
+													
+                            <div class="col-lg-12 col-md-12 text-center">
+                                <button type="button" class="btn btn-outline-primary btn-block text-uppercase mb-3" onclick="showEditProfileForm()">Update Profile<small></small></button>
+                               
+                            </div>
+                        </div>
+                        <div id="editProfileForm">
+                            
+                            <div class="form-group">
+                                <label for="userFullName">First Name<span class="text-danger ml-1">*</span></label>
+                                <input type="text" class="form-control" id="userFullName" onblur="checkUserFullName()" placeholder="First Name" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="userSurname">Last Name<span class="text-danger ml-1">*</span></label>
+                                <input type="text" class="form-control" id="userSurname" onblur="checkUserSurname()" placeholder="Last Name" disabled>
+                            </div>
+							
+							<div class="form-group">
+                                <label for="userSurname">Your Plan<span class="text-danger ml-1">*</span></label>
+                                <input type="text" class="form-control" id="selectPlans" onblur="checkUserPlans()" placeholder="Your Plans" disabled>
+                            </div>
+							
+							<div class="form-group">
+                                <label for="userEmail">Email Address<span class="text-danger ml-1">*</span></label>
+                                <input type="email" class="form-control" id="userEmail" onblur="checkUserEmail()" placeholder="mail@mail.com" disabled>                              
+                            </div>
+                            <div class="form-group">
+                                <label for="userId">User Id<span class="text-danger ml-1">*</span></label>
+                                <input type="text" class="form-control" id="userId" onblur="checkUserId()" placeholder="User Id" disabled>
+								
+                            </div>
+                            <div class="form-group">
+                                <label for="sponcerId">Sponcer Id<span class="text-danger ml-1">*</span></label>
+                                <input type="text" class="form-control" id="sponcerId" onblur="checkSponcerId()" placeholder="Sponcer Id">
+								<small id="usersponcerIdError" class="form-text text-danger">Please fill the Sponcer Id.</small>
+                            
+							</div>
+                           
+                            <div class="form-group">
+                                <label for="userMobile">Mobile<span class="text-danger ml-1">*</span></label>
+                                <input type="mobile" class="form-control" id="userMobile" onblur="checkUserMobile()" placeholder="User Mobile">
+								<small id="userMobileError" class="form-text text-danger">Please fill the Currect Mobile.</small>
+                            
+							 </div>
+                            <button type="button" class="btn btn-outline-primary btn-block text-uppercase mb-3" onclick="saveProfile1()">Update</button>
+                            <button type="button" class="btn btn-outline-secondary btn-block text-uppercase" onclick="hideEditProfileForm()">Cancel</button>
+							&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+   <!-- Firebase -->
+    
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA063-ngsexQ0rhIvtHRKP0LmB0yBrH5vk",
+    authDomain: "oneclick-73406.firebaseapp.com",
+    databaseURL: "https://oneclick-73406.firebaseio.com",
+    projectId: "oneclick-73406",
+    storageBucket: "oneclick-73406.appspot.com",
+    messagingSenderId: "69122383434",
+    appId: "1:69122383434:web:ed374155a50b23b0a610b3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    
+    <!-- Custom JavaScript -->
+    <script src="../js/app.js"></script>
+	<!-- Sweet Alert JavaScript -->
+    <script src="../js/sweetalert2.js"></script>
+	
+   
+<!-- Apex Chart -->
+<script src="js/plugins/apexcharts.min.js"></script>
+<!-- custom-chart js -->
+<script src="js/pages/dashboard-main.js"></script>
+
+<!-- Required Js -->
+    <script src="js/vendor-all.min.js"></script>
+    <script src="js/plugins/bootstrap.min.js"></script>
+    <script src="js/pcoded.min.js"></script>
+    
+</body>
+</html>
