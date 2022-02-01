@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 Author: WebThemez
 Author URL: http://webthemez.com
 License: Creative Commons Attribution 3.0 Unported
@@ -11,60 +11,62 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Real Estate Builders Free Responsive Website Templates - icon">
     <meta name="author" content="webThemez.com">
-    <title>Real Estate Free Responsive Website Templates - icon</title>
+    <title>GCPL</title>
     <link rel="favicon" href="assets/images/favicon.png">
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!-- Custom styles for our template -->
     <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+    <link rel='stylesheet' id='camera-css' href='assets/css/camera.css' type='text/css' media='all'> 
+
 </head>
 
 <body>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
         <div class="container">
             <div class="navbar-header">
                 <!-- Button for smallest screens -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.png" alt="Techro HTML5 template"></a>
+                <a class="navbar-brand" href="about.html">
+                    <b>Globus Constructions Pvt Ltd</b>
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right mainNav">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Home.html">Home</a></li>
                     <li class="active"><a href="about.html">About</a></li>
-                   	<li><a href="services.html">Services</a></li>
-					<li><a href="price.html">Price</a></li>
-					<li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="price.html">Price</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="sidebar-right.html">Right Sidebar</a></li>
-                            <li><a href="#">Dummy Link1</a></li>
-                            <li><a href="#">Dummy Link2</a></li>
-                            <li><a href="#">Dummy Link3</a></li>
+                            <span class="h4" id="userPfFullName">User</span>
+                            <span class="h4" id="userPfSurname">Name</span>
+
+                            <li><a href="profile.html">Update Profile</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a type="button" onclick="signOut()">Logout</a></li>
                         </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    </li>  
                 </ul>
+
             </div>
+
             <!--/.nav-collapse -->
         </div>
     </div>
     <!-- /.navbar -->
+    
 
     <header id="head" class="secondary">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
-                    <h1>About us</h1>
+                    
                 </div>
             </div>
         </div>
@@ -321,7 +323,7 @@ vel vel turpis. Duis justo elit, iaculis iaculis mauris at, aliquet volutpat mau
 					<div class="col-md-6 panel">
 						<div class="panel-body">
 							<p class="simplenav">
-								<a href="index.html">Home</a> | 
+                                <a href="Home.html">Home</a> | 
 								<a href="about.html">About</a> |
 								<a href="services.html">Services</a> |
 								<a href="price.html">Price</a> |
@@ -350,5 +352,57 @@ vel vel turpis. Duis justo elit, iaculis iaculis mauris at, aliquet volutpat mau
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
+
+    <!-- Firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use  -->
+    <script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+
+    <!-- auto sign up popup window-->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA063-ngsexQ0rhIvtHRKP0LmB0yBrH5vk",
+            authDomain: "oneclick-73406.firebaseapp.com",
+            databaseURL: "https://oneclick-73406.firebaseio.com",
+            projectId: "oneclick-73406",
+            storageBucket: "oneclick-73406.appspot.com",
+            messagingSenderId: "69122383434",
+            appId: "1:69122383434:web:ed374155a50b23b0a610b3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/app.js"></script>
+    <!-- Sweet Alert JavaScript -->
+    <script src="assets/js/sweetalert2.js"></script>
+
+    <script>
+        jQuery(function () {
+
+            jQuery('#camera_wrap_4').camera({
+                height: '750',
+                loader: 'bar',
+                pagination: false,
+                thumbnails: false,
+                hover: false,
+                opacityOnGrid: false,
+                imagePath: 'assets/images/'
+            });
+
+        });
+    </script>
 </body>
 </html>
