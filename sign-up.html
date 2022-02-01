@@ -14,10 +14,25 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <title>Sign Up | Subscribe</title>
 </head>
-<body class="bg-light">
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <a class="navbar-brand" href="sign-up.html">
+                    <b>Globus Constructions Pvt Ltd</b>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.navbar -->
+      
+      
+    <div class="bg-light">
     <div class="container-fluid">
         <div class="row mx-1">
-            
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 text-primary"></div>
             <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 bg-white shadow mb-5 border border-primary">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 p-4 bg-primary divCover">
@@ -48,19 +63,20 @@
                                 <input type="password" class="form-control" id="userPassword" onblur="checkUserPassword()" placeholder="**********">
                                 <small id="userPasswordError" class="form-text text-danger">Your password must be uppercase, lowercase and more than 10 characters.</small>
                             </div>
-                            <button type="button" class="btn btn-outline-primary text-uppercase mb-3" onclick="signUp()">Sign Up</button>&nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn btn-outline-primary text-uppercase mb-1" onclick="signUp()">Sign Up</button>&nbsp;&nbsp;
 
-                            <a href="#" class="btn-google m-b-20"><img src="public/img/icons/icon-google.png" alt="GOOGLE">Google&nbsp;Login</a>&nbsp;&nbsp;&nbsp;
+                            <a href="#" class="btn-google m-b-20"><img src="public/img/icons/icon-google.png" alt="GOOGLE">Login</a>&nbsp;&nbsp;
 
-                            <a href="#" class="btn-google m-b-20"><img src="public/img/icons/mobile.jpg" alt="Phone">Phone&nbsp;Login</a>
+                            <a href="#" class="btn-google m-b-20"><img src="public/img/icons/mobile.jpg" alt="Phone">Login</a>
 
-                            <p>Already a member? Sign in: <a href="login.html"><strong class="text-primary text-uppercase showSignInForm">Sign In</strong></a></p>
+                            <p>Already a member? Sign in: <a href="userPasswordLogin.html"><strong class="text-primary text-uppercase showSignInForm">Sign In</strong></a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+   </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
