@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login_page.css">
+
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    
+    <!-- Sweet Alert JavaScript -->
+    <script src="assets/js/sweetalert2.js"></script>
+    <!-- Nunito Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <title>Mobile Log in | GCPL</title>
+</head>
+
+
+<body> 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">        
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+               
+                <a class="navbar-brand" href="index.html">
+                    <b>Globus Constructions Pvt Ltd</b>
+                </a>
+            </div>           
+        </div>
+    </div>
+    <!-- /.navbar -->
+   <div class="bg-light">
+    <div class="container-fluid">
+        <div class="row mx-1">
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 text-primary"></div>
+                      
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 bg-white shadow mb-5 border border-primary">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 p-4 bg-primary divCover">
+                        <img src="assets/images/helping11.png" alt="Firebase cover image">
+                    </div>
+                    <div class="col-lg-6 col-md-6 p-lg-5 p-md-5 px-3 py-4">
+                       
+                        <main class="mdl-layout__content mdl-color--grey-100">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+                                <p><b>Enter Your Phone Number Below.</b></p>
+                                <form id="sign-in-form" action="#">
+                                    <!-- Input to enter the phone number -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="\+[0-9\s\-\(\)]+" id="phone-number">
+                                        <label class="mdl-textfield__label" for="phone-number">Enter Your Phone Number with (+91)</label>
+                                        <span class="mdl-textfield__error">Input is not an international phone number!</span>
+                                    </div>
+                                    <!-- Button that handles sign-in -->
+                                    <input type="submit" disabled class="mdl-button mdl-js-button mdl-button--raised" id="sign-in-button" value="Sign-in" />
+                                    <!-- Container to display the re-captcha check -->
+                                    <div id="recaptcha-container"></div>
+                                </form>
+                            </div>
+                        </main>                       
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   
+<!-- Firebase -->
+    
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use  -->
+<script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA063-ngsexQ0rhIvtHRKP0LmB0yBrH5vk",
+    authDomain: "oneclick-73406.firebaseapp.com",
+    databaseURL: "https://oneclick-73406.firebaseio.com",
+    projectId: "oneclick-73406",
+    storageBucket: "oneclick-73406.appspot.com",
+    messagingSenderId: "69122383434",
+    appId: "1:69122383434:web:ed374155a50b23b0a610b3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+</script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/phone.js"></script>
+	
+<script>
+function myFunction() {
+  var x = document.getElementById("userSIPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+   
+</body>
+</html>
+
